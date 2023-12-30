@@ -1,0 +1,68 @@
+CLASS TaskTwo
+
+MAIN
+
+PRINT Greeting message
+INITIALISE 4 arrays for sharks species (1 per)
+
+ASK FOR/TAKE input from user for day 1-5 shark sightings
+        FOR (i counter loop for < 5)
+            TRY
+                GET user input
+                If >=0 then put at index[i] in shark's array
+                Else give invalid input message
+            CATCH
+            InputMismatch exception
+            Give invalid input (not an integer) message
+        
+    DO THIS LOOP FOR ALL SHARKS AND THEIR ARRAY INPUTS
+
+AFTER ARRAY INFO IS DONE
+
+MENU
+PRINT out Menu messages options
+
+EXAMPLE BELOW
+Print menu out to terminal with 1,2,3,4,etc options
+1. show avg for each shark over entire 5 day period
+2. show shark that had the highest sightings value over the 5 days
+3. show shark that had the lowest sightings value over the 5 days
+4. show % breakdown of total sightings over 5 days per species
+5. show the day (use "day" + index number +1) that had largest total sightings value
+0. Exit
+
+INITIALISE int menu variable  = 0
+INITIALISE int choice variable =0
+choice = scanner next integer input
+WHILE menu = 0
+TRY
+If choice < 0 or > 5, show error message for please pick an option in the menu (1,2,3,4,5,0)
+
+If choice = 1, do menu option 1 operation
+    get all values for each sharks array, and average
+    example print out - MAKO - Average Sightings = XX 
+
+If choice = 2, do menu option 2 operation
+    use max method to find max of each array
+    then find highest by finding max of those 4 figures from each array
+
+If choice = 3, do menu option 3 operation
+    same as choice = 2, but using min method
+
+If choice = 4, do menu option 4 operation
+    sum array elements for each species, and for all species
+    divide sum of each species by all species, display as %
+    print message (example GREAT WHITE - XX%, MAKO - YY%, etc)
+
+if choice = 5, do menu option 5 operation
+    do same operation as for choice 2
+    find array index that value was in, print out index + 1 for the day
+    Example: if max value was in array index 3 (Day (index +1)) - Day 4
+
+if choice = 0, do menu option 0 operation
+    set menu to 1, exit while loop and end program
+
+CATCH
+For input mismatch
+
+END MAIN
