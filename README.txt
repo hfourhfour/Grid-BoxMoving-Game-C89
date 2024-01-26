@@ -12,9 +12,12 @@ Description:       	Project for COMP1000
 
                         LINE 1 = MAP SIZE (e.g 20 x 30 grid)
                         FOLLOWING LINES ARE FOR THE PLAYER, GOAL AND ANY WALLS ON THE MAP
-                        O - walls
-                        P - player position
-                        G - goal position
+                        x x O - walls
+                        x x P - player position
+                        x x G - goal position
+                        x x B - box position
+
+                        Make sure coordinates for the goal, box, player or walls are within the map size parameters on line 1.
 
                     2. Run makefile to create executeable for box game ('make' in terminal, or 'make PULL=1' to enable PULLING the box)
 
